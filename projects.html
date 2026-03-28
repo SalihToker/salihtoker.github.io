@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Projects</title>
+    <title>Salih Toker | Projects</title>
 </head>
 <body>
     <header>
-        <a href="index.html" class="logo">Salih</a>
+        <a href="/" class="logo">Salih</a>
 
         <nav>
-            <a href="index.html"> Home</a>
-            <a href="about-me.html">About Me</a>
-            <a href="experience.html">Experience</a>
-            <a href="blog.html">Blog</a>
-            <a href="sketches.html">Sketches</a>
+            <a href="/"> Home</a>
+            <a href="/about-me">About Me</a>
+            <a href="/experience">Experience</a>
+            <a href="/sketches">Sketches</a>
             <a href="#" class="active">Projects</a>
         </nav>
         <button class="menu-toggle" aria-label="Toggle Navigation">
@@ -25,7 +25,39 @@
 
     <section class="home">
         <div class="home-content">
-            <p>Here I share my projects</p>
+            <h1>Technical Projects</h1>
+            <p>Selected software and AI projects focused on systems, networking, and finance applications.</p>
+        </div>
+    </section>
+
+    <section class="cv-section">
+        <div class="cv-grid">
+            <article class="cv-card">
+                <h2><a href="https://github.com/UrOnEs/OOP_Group9" target="_blank" rel="noopener noreferrer">Multiplayer RTS Game (Empires of Ages)</a></h2>
+                <h3>Network Engineer | C++, SFML | Jan 2026</h3>
+                <ul>
+                    <li>Engineered a custom client-server architecture using SFML sockets with a UDP-based LAN discovery system for automatic matchmaking and lobby creation.</li>
+                    <li>Implemented a deterministic lockstep model and a custom TCP protocol with packet serialization to synchronize real-time game states and unit mechanics asynchronously.</li>
+                </ul>
+            </article>
+
+            <article class="cv-card">
+                <h2><a href="https://github.com/SalihToker/StockTradingWebSite" target="_blank" rel="noopener noreferrer">Full-Stack Stock Trading Simulation Platform</a></h2>
+                <h3>Python, Flask, SQLite, HTML/CSS | Sep 2024</h3>
+                <ul>
+                    <li>Built a full-stack trading web application with secure user authentication and portfolio management.</li>
+                    <li>Integrated financial APIs for real-time stock quotes and designed a database schema to track user balances and transaction histories.</li>
+                </ul>
+            </article>
+
+            <article class="cv-card">
+                <h2><a href="https://github.com/SalihToker/stock-analyse-ai" target="_blank" rel="noopener noreferrer">AI-Driven Stock Analysis Tool</a></h2>
+                <h3>Python, PyTorch, Hugging Face (BART, FinBERT) | Jun 2025</h3>
+                <ul>
+                    <li>Developed an automated pipeline using REST APIs, BART, and FinBERT to fetch, summarize, and analyze real-time financial news sentiment.</li>
+                    <li>Built an automated reporting system with python-docx to generate structured and actionable market summaries.</li>
+                </ul>
+            </article>
         </div>
     </section>
     <script src="assets/js/main.js"></script>

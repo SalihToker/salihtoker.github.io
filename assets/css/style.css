@@ -16,7 +16,8 @@ html{
 
 body{
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     overflow-x: hidden;
     background-color: black;
     color: white;
@@ -81,7 +82,7 @@ nav a.active{
         display: none;
         top: 100%;
         right: 0;
-        width: 40%;
+        width: 70%;
         border-left: 3px solid #b74b4b;
         border-bottom: 3px solid #b74b4b;
         border-bottom-left-radius: 2rem;
@@ -113,7 +114,8 @@ nav a.active{
 }
 
 section{
-    min-width: 100vh;
+    min-width: 0;
+    width: 100%;
     padding: 5rem 9% 5rem;
 }
 
@@ -242,16 +244,16 @@ span{
 
 @keyframes words{
     0%, 25%{
-        content: "Designer";
+        content: "Computer Engineer";
     }
     26%, 50%{
-        content: "Developer";
+        content: "Game Developer";
     }
     51%, 75%{
-        content: "Youtuber";
+        content: "Full-Stack Developer";
     }
     76%, 100%{
-        content: "Script Writer";
+        content: "AI Enthusiast";
     }
 }
 
@@ -268,7 +270,7 @@ span{
 
 @media (max-width: 995px){
     body{
-        width: fit-content;
+        width: 100%;
         overflow-x: hidden;
         flex-direction: column;
     }
@@ -290,9 +292,10 @@ span{
         flex-direction: column;
         margin: 3rem 2rem;
         height: fit-content;
-        width: fit-content;
+        width: 100%;
         right: 0;
         padding-bottom: 10vw;
+        gap: 2rem;
     }
 
     .home .home-content h3{
@@ -309,16 +312,26 @@ span{
     font-size: 5rem;
 }
 
+.contact-line{
+    margin-top: 1.5rem;
+    color: #b74b4b;
+}
+
 
 
 
 .about-container {
     display: flex;
     justify-content: space-between;
+    gap: 2rem;
+}
+
+.about-container + .about-container {
+    margin-top: 2rem;
 }
 
 .about-column {
-    width: 49.5%; /* Sütun genişliğini ayarlar */
+    width: calc(50% - 1rem); /* Sütun genişliğini ayarlar */
     padding: 10px; /* İçerik boşluğunu ayarlar */
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); /* Hafif gölge ekler */
     text-align: center;
@@ -378,14 +391,27 @@ li {
 
 @media (max-width: 995px){
     .sketches-container {
-        width: fit-content;
-        flex-direction: column
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
     }
 
     .sketch-item{
-        width: fit-content;
+        width: min(100%, 450px);
+        max-width: 450px;
+        margin: 0 auto;
     }
     
+}
+
+@media (max-width: 995px){
+    .about-container {
+        flex-direction: column;
+    }
+
+    .about-column {
+        width: 100%;
+    }
 }
 
 
@@ -419,4 +445,53 @@ table {
   td, th {
     padding: 15px; /* Hücre içindeki boşluğu artırır */
   }
+
+.cv-section{
+    padding: 0 9% 5rem;
+}
+
+.cv-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.cv-card{
+    border: 2px solid #b74b4b;
+    border-radius: 2rem;
+    padding: 2rem;
+    background-color: #0f0f0f;
+}
+
+.cv-card h2{
+    font-size: 2.2rem;
+    color: #b74b4b;
+    margin-bottom: 0.8rem;
+}
+
+.cv-card h3{
+    font-size: 1.5rem;
+    margin-bottom: 1.2rem;
+}
+
+.cv-card ul{
+    list-style: disc;
+    padding-left: 2rem;
+    text-align: left;
+}
+
+.cv-card li{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 995px){
+    .cv-section{
+        padding: 0 2rem 4rem;
+    }
+
+    .cv-grid{
+        grid-template-columns: 1fr;
+    }
+}
 
