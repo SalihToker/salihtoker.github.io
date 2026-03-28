@@ -242,16 +242,16 @@ span{
 
 @keyframes words{
     0%, 25%{
-        content: "Designer";
+        content: "Computer Engineer";
     }
     26%, 50%{
-        content: "Developer";
+        content: "CV Engineer";
     }
     51%, 75%{
-        content: "Youtuber";
+        content: "Full-Stack Developer";
     }
     76%, 100%{
-        content: "Script Writer";
+        content: "AI Enthusiast";
     }
 }
 
@@ -307,6 +307,11 @@ span{
 
 .home-content h1{
     font-size: 5rem;
+}
+
+.contact-line{
+    margin-top: 1.5rem;
+    color: #b74b4b;
 }
 
 
@@ -419,4 +424,53 @@ table {
   td, th {
     padding: 15px; /* Hücre içindeki boşluğu artırır */
   }
+
+.cv-section{
+    padding: 0 9% 5rem;
+}
+
+.cv-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.cv-card{
+    border: 2px solid #b74b4b;
+    border-radius: 2rem;
+    padding: 2rem;
+    background-color: #0f0f0f;
+}
+
+.cv-card h2{
+    font-size: 2.2rem;
+    color: #b74b4b;
+    margin-bottom: 0.8rem;
+}
+
+.cv-card h3{
+    font-size: 1.5rem;
+    margin-bottom: 1.2rem;
+}
+
+.cv-card ul{
+    list-style: disc;
+    padding-left: 2rem;
+    text-align: left;
+}
+
+.cv-card li{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 995px){
+    .cv-section{
+        padding: 0 2rem 4rem;
+    }
+
+    .cv-grid{
+        grid-template-columns: 1fr;
+    }
+}
 
