@@ -1,1 +1,14 @@
-This is my web page that includes my skills, education, experiences and projects.
+## Portfolyo Sitem
+
+Bu benim kişisel web sitem.
+
+İçeriği:
+
+- Eğitim
+- Deneyim
+- Projeler
+- Çizimler
+
+
+<br>
+- Salih Toker

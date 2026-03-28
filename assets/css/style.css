@@ -16,7 +16,8 @@ html{
 
 body{
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     overflow-x: hidden;
     background-color: black;
     color: white;
@@ -81,7 +82,7 @@ nav a.active{
         display: none;
         top: 100%;
         right: 0;
-        width: 40%;
+        width: 70%;
         border-left: 3px solid #b74b4b;
         border-bottom: 3px solid #b74b4b;
         border-bottom-left-radius: 2rem;
@@ -113,7 +114,8 @@ nav a.active{
 }
 
 section{
-    min-width: 100vh;
+    min-width: 0;
+    width: 100%;
     padding: 5rem 9% 5rem;
 }
 
@@ -245,7 +247,7 @@ span{
         content: "Computer Engineer";
     }
     26%, 50%{
-        content: "CV Engineer";
+        content: "Game Developer";
     }
     51%, 75%{
         content: "Full-Stack Developer";
@@ -268,7 +270,7 @@ span{
 
 @media (max-width: 995px){
     body{
-        width: fit-content;
+        width: 100%;
         overflow-x: hidden;
         flex-direction: column;
     }
@@ -290,9 +292,10 @@ span{
         flex-direction: column;
         margin: 3rem 2rem;
         height: fit-content;
-        width: fit-content;
+        width: 100%;
         right: 0;
         padding-bottom: 10vw;
+        gap: 2rem;
     }
 
     .home .home-content h3{
@@ -320,10 +323,15 @@ span{
 .about-container {
     display: flex;
     justify-content: space-between;
+    gap: 2rem;
+}
+
+.about-container + .about-container {
+    margin-top: 2rem;
 }
 
 .about-column {
-    width: 49.5%; /* Sütun genişliğini ayarlar */
+    width: calc(50% - 1rem); /* Sütun genişliğini ayarlar */
     padding: 10px; /* İçerik boşluğunu ayarlar */
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); /* Hafif gölge ekler */
     text-align: center;
@@ -383,14 +391,27 @@ li {
 
 @media (max-width: 995px){
     .sketches-container {
-        width: fit-content;
-        flex-direction: column
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
     }
 
     .sketch-item{
-        width: fit-content;
+        width: min(100%, 450px);
+        max-width: 450px;
+        margin: 0 auto;
     }
     
+}
+
+@media (max-width: 995px){
+    .about-container {
+        flex-direction: column;
+    }
+
+    .about-column {
+        width: 100%;
+    }
 }
 
 
